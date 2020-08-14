@@ -1,6 +1,8 @@
 ---
 ---
 
+@import "no-style-please";
+
 hr {
   text-align: center;
   border: 0;
@@ -12,5 +14,3 @@ hr {
 h1{
   &:first-letter{ color: forestgreen; }
 }
-
-@import "no-style-please";
