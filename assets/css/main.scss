@@ -1,4 +1,15 @@
 ---
 ---
-@import "no-style-please-custom";
 @import "no-style-please";
+
+hr {
+  text-align: center;
+  border: 0;
+
+  &:before { content: '-----' }
+  &:after { content: attr(data-content) '-----' }
+}
+
+h2{
+  color: forestgreen;
+}
