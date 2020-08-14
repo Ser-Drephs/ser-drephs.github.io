@@ -9,8 +9,8 @@ hr {
   &:after { content: attr(data-content) '-----' }
 }
 
-h2{
-  color: forestgreen;
+h1{
+  &:first-letter{ color: forestgreen; }
 }
 
 @import "no-style-please";
