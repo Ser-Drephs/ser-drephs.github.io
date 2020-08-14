@@ -1,13 +1,10 @@
-# no style, please!
+# Ser-Drephs Blog
 
-<img src="https://raw.githubusercontent.com/riggraz/no-style-please/master/logo.png" width="64" align="left" />A (nearly) no-CSS, fast, minimalist [Jekyll](https://jekyllrb.com/) theme.
-Inspired by [elly's site](http://tilde.town/~elly/), expressly created for [my personal blog](https://riggraz.dev/).
+This is the source code of my personal blog and other public information about me.
 
-<h3 align="center"><a href="https://riggraz.dev/no-style-please/">Try the demo out!</a></h3>
+## Features of "no-style-please"
 
-<img src="https://raw.githubusercontent.com/riggraz/no-style-please/master/_screenshots/featured-image.png" />
-
-## Features
+Used Yekyll Style is ["no-style-please" from riggraz](https://github.com/riggraz/no-style-please) with some design modifications.
 
 * Fast (**< 1kb of CSS**, see [Page Speed Insights report](https://raw.githubusercontent.com/riggraz/no-style-please/master/_screenshots/page-speed-insights-report.png) and [Lighthouse report](https://raw.githubusercontent.com/riggraz/no-style-please/master/_screenshots/lighthouse-report.png))
 * Responsive
@@ -16,43 +13,13 @@ Inspired by [elly's site](http://tilde.town/~elly/), expressly created for [my p
 * RSS feed (uses [Jekyll Feed](https://github.com/jekyll/jekyll-feed))
 * Fully compatible with [GitHub Pages](https://pages.github.com/) (see [GitHub Pages installation](#github-pages-installation))
 
-## Installation
-
-If you haven't already created your blog using Jekyll, follow the [instructions](https://jekyllrb.com/docs/) to do so from Jekyll's documentation.
-
-NOTE: if you are using Jekyll with GitHub Pages, see the [GitHub Pages installation section](#github-pages-installation).
-
-Then, to style your blog with this theme, add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "no-style-please"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: no-style-please
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install no-style-please
-
-### GitHub Pages installation
-
-If you want to use this theme for your Jekyll's site deployed on [GitHub Pages](https://pages.github.com/), follow the instructions on [this page](https://docs.github.com/en/github/working-with-github-pages/adding-a-theme-to-your-github-pages-site-using-jekyll#adding-a-theme).
-
-## Usage
+### Usage
 
 You can edit `_config.yml` file to customize your blog. You can change things such as the name of the blog, the author, how dates are formatted, etc. Customizable fields should be straightforward to understand, however `_config.yml` contains some comments to help you understand what each fields does.
 
 For further customization (e.g. layout, CSS) see the [official Jekyll's documentation](https://jekyllrb.com/docs/themes/#overriding-theme-defaults) on customizing gem-based themes.
 
-### Customize the menu
+#### Customize the menu
 
 In order to add/edit/delete entries from the main menu, you have to edit the `menu.yml` file inside `_data` folder. Through that file you can define the structure of the menu. Take a look at the default configuration to get an idea of how it works and read on for a more comprehensive explanation.
 
@@ -66,20 +33,39 @@ The `menu.yml` file accepts the following fields:
     - `post_list`, which can be `true` or `false`. If it is true, the entry will have all posts in the site as subentries. This is used to render your post list.
     - `entries`, yes, you can have entries inside entries. In this way you can create nested sublists!
 
-## Contributing
+### Post Reference
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+To start a new post use:
+```
+---
+layout: post
+title: 'Start of a new blog'
+---
+```
 
-## Development
+Or with Slug (permalink):
+```
+---
+layout: post
+slug: start of a new blog
+---
+```
 
-To set up your environment to develop this theme, run `bundle install`.
+To create a `hr` with text use:
+```
+---
+{: data-content="discussions"}
+```
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+To create a footnote use `[^1]` with (tbe?):
+```
+---
+{: data-content="footnotes"}
+[^1]: ...
+```
 
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `no-style-please.gemspec` accordingly.
 
-## License
+### License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
