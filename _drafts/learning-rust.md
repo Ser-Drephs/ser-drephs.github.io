@@ -7,13 +7,13 @@ tags:
   - conventional commits
 ---
 
-I am using [gitui](https://github.com/extrawurst/gitui) as my primary graphical git tool. And I had some issues with it. First the `external Editor` Feature didn't work, now pushing to the the upsteam branch. So I decided to check the sources. It's an open-source project, so why not. That was my first encounter with Rust.
+I am using [gitui](https://github.com/extrawurst/gitui) as my primary graphical git tool and I had some issues with it. First the `external Editor` Feature didn't work, now pushing to the upsteam branch. So I decided to check the sources. It's an open-source project, so why not. That was my first encounter with Rust.
 
-Throughout the years I learned a few programming languages like `python`, `java`, `c#` so I had no problem reading it. Understanding what the code actually does is another thing. So I tried to "fix" a bug tagged as a `good first issue`. That is where the journey began.
+Throughout the years I learned a few programming languages like `python`, `java`, `c#` so I had no problem reading it. Understanding what the code actually did was something completely different. So I tried to "fix" a bug tagged as a `good first issue`. That is where the journey began.
 
 A few things to mention:
 - I didn't fix the bug 😅 My PR wasn't fully merged. But I decided to give it a try.
-- At this point I haven't read ["the book"](https://doc.rust-lang.org/book/) or anything else about Rust. I just started. Hands on experience.
+- At this point I didn't read ["the book"](https://doc.rust-lang.org/book/) or anything else about Rust. I just started. Hands on experience.
 
 I decided to create a changelog generator based on both conventional commits and non-conventional commits[^1].
 
@@ -33,7 +33,7 @@ This post is about how I started my first ever Rust project. My experience on ho
 
 ## Setup
 
-Setting up my computer for Rust development was pretty easy. Head over to [Rust Lang Install](https://www.rust-lang.org/tools/install) to download `rustup`. On installation it was required to download some Visual C++ Redistributables. I don't remember which, but the setup guides you through this. After that you are already set up.
+Setting up my computer for Rust development was pretty easy. Head over to [Rust Lang Install](https://www.rust-lang.org/tools/install) to download `rustup`. During the installation it was required to download some Visual C++ Redistributables. I don't remember which, but the setup guides you through this. After that you are already set up.
 
 I use [Visual Studio Code](https://code.visualstudio.com/) with the [Rust Extension](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust) for development. The [C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) is also required for debugging.
 
@@ -41,7 +41,7 @@ I use [Visual Studio Code](https://code.visualstudio.com/) with the [Rust Extens
 
 Rust uses so called "crates". [Crates](https://crates.io/) are packages which you can use in your application. Cargo is the package manager for Rust.
 
-To start a new Rust project just open a shell and type `cargo new <name>` ex. `cargo new changelog`. Cargo then generated a project stub for your new project.
+To start a new Rust project just open a shell and type `cargo new <name>` ex. `cargo new changelog`. Cargo then generates a project stub for your new project.
 
 ```shell
 D:\sources> cargo new changelog
@@ -61,7 +61,7 @@ d----          26.03.2021    09:08                src
 
 To build the project simply run `cargo build` in your shell or use VSCode to build it.
 
-It's also possible to debug the application withing VSCode. Simply set a breakpoint and hit <kbd>F5</kbd>. I have two debug configurations for this project, because I also wanted to debug my unit tests. My `launch.json` look like this:
+It's also possible to debug the application within VSCode. Simply set a breakpoint and hit <kbd>F5</kbd>. I have two debug configurations for this project, because I also wanted to debug my unit tests. My `launch.json` look like this:
 
 ```json
 {
@@ -111,7 +111,7 @@ It's also possible to debug the application withing VSCode. Simply set a breakpo
 }
 ```
 
-So now everything is set up. Let's go!
+Now that everything is set up: Let's go!
 
 {: data-content="footnotes"}
 
